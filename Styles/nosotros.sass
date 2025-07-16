@@ -1,0 +1,79 @@
+@use 'variables'
+.nosotros-frase-destacada
+    background: variables.$color-fondo-sesion  //  Fondo personalizado para la frase destacada en nosotros.html 
+
+
+.nosotros-h1
+    color: #000  //  h1 en negro para nosotros.html 
+
+
+.nosotros-valores
+    background: #1976D2   //  azul del logo 
+    color: #fff 
+
+.nosotros-mision
+    background: #41464A   //  gris oscuro del logo 
+    color: #fff 
+    border-color: #1976D2 
+
+.nosotros-vision
+    background: #F9B233    //  amarillo del logo 
+    color: #222 
+
+.nosotros-valores h3,
+.nosotros-mision h3,
+.nosotros-vision h3
+    color: inherit 
+
+
+.nosotros-banner-equipo //  Banner de equipo con estilo visual igual al blockquote destacado 
+    height: 120px
+    width: 100%
+    max-width: 100%
+    object-fit: cover
+    object-position: center
+    display: block
+    margin: 32px auto
+    border-radius: 1.5rem 
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)
+    background: #1976D2
+    padding: 0
+
+.nosotros-directivos-grid .img-fluid  
+    max-width: 300px
+
+.nosotros-directivos-grid .bg-light
+    font-size: 1.08rem
+    padding: 2rem 1.5rem
+
+.nosotros-directivos-grid
+    justify-content: center 
+    margin-left: 0
+    margin-right: 0
+
+    & .col
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-left: 0
+        padding-right: 0
+
+    & .img-fluid
+        max-width: 300px
+        margin-left: auto
+        margin-right: auto
+
+    & .bg-light
+        font-size: 1.08rem
+        padding: 2rem 1.5rem
+        margin-top: 0.5rem
+        margin-bottom: 0.5rem
+
+    & .shadow-sm
+        margin-bottom: 0 
+
+    & .rounded-4
+        margin-bottom: 0.5rem 
+
+.nosotros-mision-titulo
+    color: #8e24aa 

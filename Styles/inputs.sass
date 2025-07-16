@@ -1,0 +1,35 @@
+@use 'variables'
+.input
+    width: 100%
+    padding: 10px
+    background: transparent
+    font-size: variables.$tamanio-texto
+    border: none
+    border-bottom: 1px solid variables.$color-secundario
+    box-sizing: border-box   // reserva espacio  
+    outline: none
+    box-shadow: inset 0 -1px 0 variables.$color-secundario  //  estado inicial: 2px visible + 1px transparente debajo 
+    transition: box-shadow 0.2s ease
+
+    &:hover //  hover (aumenta grosor visual a 3px) 
+        box-shadow: inset 0 -2px 0 variables.$color-secundario
+
+
+    &:focus //  focus (mantiene 3px incluso si se deja de hacer hover) 
+        box-shadow: inset 0 -2px 0 variables.$color-primario
+
+.busqueda
+    flex: 1
+    display: flex
+    justify-content: center
+
+    & input
+        width: 60%
+        max-width: 400px
+        padding: 8px 12px
+        border: 1px solid variables.$color-borde
+        border-radius: variables.$radio-borde
+
+    & .btn-buscar
+        background-color: variables.$color-fondo
+        border-color: variables.$color-borde

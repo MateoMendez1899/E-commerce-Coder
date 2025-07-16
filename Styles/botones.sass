@@ -1,0 +1,71 @@
+@use 'variables'
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: variables.$radio-borde
+  height: variables.$alto-button
+  width: variables.$ancho-button
+
+.button
+  width: variables.$ancho-button
+  height: variables.$alto-button
+  background: variables.$color-primario
+  border-radius: variables.$radio-borde
+  font-size: variables.$tam-text-buttom
+  color: variables.$color-fondo
+  cursor: pointer
+  outline: none
+  border: none
+
+  &:hover
+    border-color: #eeeeee
+    transition: 0.5s ease
+
+.checkbox-container
+    display: flex
+    align-items: center
+    margin: variables.$espaciado-sm 0 variables.$espaciado-sm 0
+    gap: variables.$espaciado-sm
+
+.checkbox
+    align-self: flex-start
+    margin: 0
+    accent-color: variables.$color-primario
+
+    &:hover
+        cursor: pointer
+        accent-color: variables.$color-secundario
+
+#radio1:checked~.slides
+    transform: translateX(0%)
+
+#radio2:checked~.slides
+    transform: translateX(-100%)
+
+#radio3:checked~.slides
+    transform: translateX(-200%)
+
+.manual-btn
+    border: 2px solid variables.$color-secundario
+    padding: 5px
+    border-radius: 50%
+    cursor: pointer
+    background: rgba(255, 255, 255, 0.7)
+
+
+.producto button
+    background: variables.$color-primario
+    color: variables.$color-button-texto
+    padding: 10px 16px
+    border: none
+    border-radius: variables.$radio-borde
+    cursor: pointer
+    font-weight: bold
+    transition: background-color 0.3s ease
+
+    &:hover
+        background: #e0404b
+
+
+        

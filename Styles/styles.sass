@@ -1,0 +1,144 @@
+@use 'variables.sass'
+@use 'carousel.sass'
+@use 'form.sass'
+@use 'nosotros.sass'
+@use 'botones.sass'
+@use 'card.sass'
+@use 'footer.sass'
+@use 'imagenes.sass'
+@use 'inputs.sass'
+@use 'listas.sass'
+@use 'red-social.sass'
+@use 'sin-determinar.sass'
+@use 'section.sass'
+@use 'labels.sass'
+
+body
+    background: variables.$color-fondo
+    color: variables.$color-texto
+    font-family: variables.$fuente-base
+    font-size: variables.$tamanio-texto
+    margin: 0
+    overflow-x: hidden
+    position: relative
+    min-height: 100vh
+
+h1
+    font-size: variables.$titulo-xl
+
+button
+    background-color: variables.$color-primario
+    border-radius: variables.$radio-borde
+    padding: variables.$espaciado-sm variables.$espaciado-md
+
+label
+    color: variables.$color-primario
+
+
+
+
+header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: variables.$altura-header
+    padding: 10px 30px
+    background-color: variables.$color-fondo
+    border-bottom: 2px solid variables.$color-borde
+    box-shadow: 0 2px 5px #0000001a
+
+nav
+    display: flex
+    align-items: center
+
+nav a 
+    text-decoration: none
+    color: variables.$color-texto
+    font-weight: 600
+    transition: color 0.3s
+
+nav a:hover 
+    color: #007bff
+
+img
+    height: 70px
+
+input[name="radio-btn"]
+    display: none
+
+img[style*="max-width: 220px;"] 
+    max-width: 220px 
+
+img[style*="max-width: 350px;"] 
+    max-width: 350px 
+
+img[style*="max-width: 240px;"] 
+    max-width: 240px 
+    display: block 
+
+img[style*="margin-left: auto;"][style*="margin-right: auto;"] 
+    margin-left: auto 
+    margin-right: auto 
+
+div[style*="border-top: 1px solid #444"] 
+    border-top: 1px solid #444 
+    width: 100% 
+    margin: 0 auto 0.5rem auto 
+
+body.singin-padding
+    padding-bottom: 60px
+
+article
+    width: 30%  // Cada artículo ocupa el 30% del ancho del contenedor //
+    margin-bottom: 20px     // Espacio entre los artículos //
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+    h2
+        font-size: 20px
+        font-weight: 600
+        opacity: 80%
+        margin-bottom: 10px
+
+    img
+        width: 100%
+        height: auto
+        margin-bottom: 10px
+
+    p
+        font-size: 14px
+        color: #7A7A7A
+
+.container 
+  display: grid
+  grid-template-rows: auto 1fr auto
+  min-height: 100vh
+
+
+.containerflex 
+  display: flex
+  align-items: center
+  gap: 10px
+
+
+.logo 
+  height: 50px
+  width: auto
+  border-radius: variables.$radio-borde
+
+
+.sesion 
+  background: variables.$color-fondo-sesion
+
+
+.align-self-center
+    align-self: center
+
+.space-between-as
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    padding: 0 10px
+    margin-top: variables.$espaciado-md
+    margin-bottom: variables.$espaciado-md  // Distribuir el espacio entre los elementos       
+    color: variables.$color-primario    

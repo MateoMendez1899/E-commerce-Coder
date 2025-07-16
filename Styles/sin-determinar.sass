@@ -1,0 +1,48 @@
+@use 'variables'
+
+
+.productos-grid
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    gap: 20px
+    max-width: 1200px
+    margin: 0 auto
+
+.producto
+    background-color: variables.$color-fondo
+    padding: 20px
+    border: 1px solid variables.$color-borde
+    border-radius: variables.$radio-borde
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05)
+    transition: transform 0.2s ease
+    position: relative
+
+    &:hover
+        transform: scale(1.03)
+
+    & img
+        width: 100%
+        height: auto
+        border-radius: variables.$radio-borde
+
+    & h3
+        margin-top: 10px
+        font-size: variables.$tamanio-texto
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
