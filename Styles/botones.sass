@@ -54,7 +54,7 @@
     background: rgba(255, 255, 255, 0.7)
 
 
-.producto button
+.producto-button
     background: variables.$color-primario
     color: variables.$color-button-texto
     padding: 10px 16px
@@ -67,5 +67,24 @@
     &:hover
         background: #e0404b
 
+
+.product-card__button
+  display: inline-block
+  background-color: #007bff 
+  color: variables.$color-button-texto
+  border: none
+  border-radius: variables.$radio-borde
+  height: variables.$alto-button
+  width: 100%
+  font-size: variables.$tam-text-buttom
+  font-weight: 600
+  text-align: center
+  line-height: variables.$alto-button
+  cursor: pointer
+  user-select: none
+  transition: background-color 0.3s ease
+
+  &:hover
+    background-color: darken(#007bff, 10%)    
 
         

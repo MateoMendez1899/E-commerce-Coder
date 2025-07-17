@@ -1,23 +1,68 @@
 @use 'variables'
-.fixed-footer
-    position: fixed
-    left: 0
-    bottom: 0
-    width: 100%
-    height: 60px
-    z-index: 100
-    background: #fff
-    display: flex
-    align-items: center
-    justify-content: center
-    border-top: 1px solid #dee2e6
 
 .footer
-    font-size: 10px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    padding: 10px
-    background: variables.$color-fondo
-    color: variables.$color-texto
-    border-top: 1px solid variables.$color-borde
+    background-color: variables.$color-fondo
+    padding: 0.5rem
+    font-size: 0.8rem
+
+    &__container
+        max-width: 100%
+        margin: 0 auto
+        border-top: 1px solid variables.$color-borde
+        padding: 1rem
+        padding-bottom: 0
+
+    &__row
+        display: flex
+        flex-direction: column
+        gap: 1.5rem
+
+        @media (min-width: 768px)
+            flex-direction: row
+            justify-content: space-between
+
+    &__column
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    &__title
+        font-weight: bold
+        margin-bottom: 0.5rem
+
+    &__text
+        margin: 0
+
+    &__social
+        display: flex
+        gap: 1rem
+
+    &__bottom
+        margin-top: 2rem
+        text-align: center
+
+    &__divider
+        border-top: 1px solid variables.$color-borde
+        margin-bottom: 0.5rem
+
+    &__rights
+        font-size: 0.9rem
+
+.footer__icon
+    width: 2rem
+    height: 2rem
+    background-size: contain
+    background-repeat: no-repeat
+
+    &.facebook
+        background-image: variables.$facebook
+
+    &.twitter
+        background-image: variables.$twitter
+
+    &.instagram
+        background-image: variables.$instagram
+
+    &.youtube
+        background-image: variables.$youtube

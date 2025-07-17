@@ -1,3 +1,4 @@
+@use 'variables'
 .card.h-100.shadow-sm
     transition: transform 0.2s cubic-bezier(.4, 2, .6, 1), box-shadow 0.2s
 
@@ -10,3 +11,131 @@
 .card.shadow-sm.p-4[style="max-width: 400px; width: 100%;"]
     max-width: 400px
     width: 100%
+
+
+.card-productos 
+  width: 100%
+  max-width: 300px
+  background-color: variables.$color-fondo
+  border: 1px solid variables.$color-borde
+  border-radius: variables.$radio-borde
+  box-shadow: variables.$sombra-intensa
+  overflow: hidden
+  transition: transform 0.3s ease
+
+  &:hover 
+    transform: translateY(-5px)
+  
+
+  &__image 
+    width: 100%
+    display: block
+    height: auto
+    object-fit: cover
+  
+
+  &__body 
+    padding: 16px
+  
+
+  &__title 
+    margin: 0 0 8px
+    font-size: 1.25rem
+    color: variables.$color-texto
+  
+
+  &__text 
+    margin: 0
+    font-size: 1rem
+    color: darken(variables.$color-texto, 10%)
+  
+
+
+
+
+
+
+.card-pequena
+  background-color: white
+  border: 1px solid variables.$color-borde
+  border-radius: variables.$radio-borde
+  box-shadow: variables.$sombra-suave
+  overflow: hidden
+  position: relative
+  display: flex
+  flex-direction: column
+  transition: transform 0.2s ease
+
+  &:hover
+    transform: scale(1.02)
+
+  &__badge
+    position: absolute
+    top: variables.$espaciado-sm
+    left: variables.$espaciado-sm
+    background-color: variables.$color-error
+    color: white
+    font-size: 0.85rem
+    font-weight: bold
+    padding: variables.$espaciado-xs variables.$espaciado-sm
+    border-radius: variables.$radio-borde
+    z-index: 1
+
+  &__image
+    width: 100%
+    height: 190px
+    object-fit: contain
+    border-bottom: 1px solid variables.$color-borde
+
+  &__body
+    padding: variables.$espaciado-sm
+    display: flex
+    flex-direction: column
+    gap: variables.$espaciado-sm
+    flex-grow: 1
+
+  &__title
+    font-size: 1.1rem
+    font-weight: 600
+    color: variables.$color-texto
+    margin: 0
+
+  &__price
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &--old
+      text-decoration: line-through
+      color: variables.$color-secundario
+      font-size: 1rem
+
+    &--new
+      color: variables.$color-error
+      font-weight: bold
+      font-size: 1.2rem
+
+  &__button
+    background-color: variables.$color-fondo-button
+    color: variables.$color-button-texto
+    border: none
+    padding: variables.$espaciado-sm
+    border-radius: variables.$radio-borde
+    font-size: 1rem
+    text-align: center
+    cursor: pointer
+    text-decoration: none
+    transition: background-color 0.3s ease
+
+    &:hover
+      background-color: darken(variables.$color-primario, 10%)
+
+
+.cards-container
+  display: flex
+  flex-wrap: wrap
+  gap: variables.$espaciado-lg
+  justify-content: center
+  padding: variables.$espaciado-xl
+  max-width: variables.$ancho-maximo
+  margin: 0 auto    
