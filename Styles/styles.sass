@@ -124,7 +124,17 @@ article
     align-items: center
     gap: variables.$espaciado-sm
 
-.temporizador
-  font-size: variables.$tamanio-texto
-  font-weight: 500
-  margin-bottom: variables.$espaciado-md    
+
+
+
+.col-custom
+  flex: 1 1 calc(33.3333% - 1rem) // como col-md-4 pero con gap
+  display: flex  // para que el contenido crezca
+
+.fila-custom
+  display: flex
+  flex-wrap: wrap
+  gap: 1.5rem
+  margin-bottom: 3rem
+  margin-top: 2rem
+  align-items: stretch  // <-- clave para igualar la altura
