@@ -14,8 +14,6 @@
 @use 'animations.sass'
 @use 'header.sass'
 
-
-
 h1
     font-size: variables.$titulo-xl
 
@@ -26,8 +24,6 @@ button
 
 label
     color: variables.$color-primario
-
-
 
 input[name="radio-btn"]
     display: none
@@ -50,8 +46,6 @@ div[style*="border-top: 1px solid #444"]
     border-top: 1px solid #444
     width: 100%
     margin: 0 auto 0.5rem auto
-
-
 
 article
     width: 30% // Cada artículo ocupa el 30% del ancho del contenedor //
@@ -78,10 +72,11 @@ article
     grid-template-rows: auto 1fr auto
     min-height: 100vh
 
-.containerflex
+.container-main
     display: flex
-    align-items: center
-    gap: 10px
+    flex-direction: column
+    padding: variables.$espaciado-md
+    gap: variables.$espaciado-sm
 
 .logo
     height: 50px
@@ -94,47 +89,168 @@ article
 .align-self-center
     align-self: center
 
-.space-between-as
+.container-space-around
     display: flex
-    justify-content: space-between
+    justify-content: space-around
     align-items: center
     width: 100%
-    padding: 0 10px
-    margin-top: variables.$espaciado-md
-    margin-bottom: variables.$espaciado-md // Distribuir el espacio entre los elementos
-    color: variables.$color-primario
 
 .ofertas-relampago
-  padding: variables.$espaciado-lg 0
-  background: variables.$color-fondo
-  color: variables.$color-texto
-
-  &__container
+    padding: variables.$espaciado-lg 0
     background: variables.$color-fondo
-    border-radius: variables.$radio-borde
-    padding: variables.$espaciado-lg
-    box-shadow: variables.$sombra-suave
+    color: variables.$color-texto
 
-  &__titulo
-    font-size: variables.$titulo-md
-    font-weight: bold
-    color: variables.$color-error
-    margin-bottom: variables.$espaciado-md
-    display: flex
-    align-items: center
-    gap: variables.$espaciado-sm
+    &__container
+        background: variables.$color-fondo
+        border-radius: variables.$radio-borde
+        padding: variables.$espaciado-lg
+        box-shadow: variables.$sombra-suave
 
-
-
+    &__titulo
+        font-size: variables.$titulo-md
+        font-weight: bold
+        color: variables.$color-error
+        margin-bottom: variables.$espaciado-md
+        display: flex
+        align-items: center
+        gap: variables.$espaciado-sm
 
 .col-custom
-  flex: 1 1 calc(33.3333% - 1rem) // como col-md-4 pero con gap
-  display: flex  // para que el contenido crezca
+    flex: 1 1 calc(33.3333% - 1rem) // como col-md-4 pero con gap
+    display: flex // para que el contenido crezca
 
 .fila-custom
-  display: flex
-  flex-wrap: wrap
-  gap: 1.5rem
-  margin-bottom: 3rem
-  margin-top: 2rem
-  align-items: stretch  // <-- clave para igualar la altura
+    display: flex
+    flex-wrap: wrap
+    gap: 1.5rem
+    margin-bottom: 3rem
+    margin-top: 2rem
+    align-items: stretch // <-- clave para igualar la altura
+
+
+.container_productos
+    display: grid
+    place-items: center
+    margin-inline: 1.5rem 
+    padding-block: 5rem
+ 
+
+
+.card-productos
+  display: grid
+  row-gap: 3.5rem
+
+
+  // &__article
+  //   position: relative
+  //   overflow: hidden
+
+  &__img
+    width: 100%
+    border-radius: variables.$radio-borde
+   
+
+  &__body
+    width: 288px
+    background-color: variables.$color-fondo
+    padding: 1.5rem 2rem
+    box-shadow: variables.$sombra-media
+    border-radius: 1rem
+    position: absolute
+    bottom: -9rem   
+    left: 0
+    right: 0
+    margin-inline: auto 
+    opacity: 0
+    transition: opacity 1s 1s
+
+
+  &__text
+    display: block
+    font-size: variables.$tamanio-texto
+    margin-bottom: .25rem
+   
+
+  &__title
+    font-size: variables.$titulo-md
+    font-weight: 500
+    color: variables.$color-texto
+    margin-bottom: .75rem
+
+  &__button
+    text-decoration: none
+    font-size: variables.$tam-text-buttom
+    font-weight: 500
+    color: variables.$color-exito
+    background-color: none  
+
+  &:hover &__button
+    text-decoration: underline
+
+.card-productos__article:hover .card-productos__body
+ animation: show-data 1s forwards
+  opacity: 1
+  transition: opacity .3s
+
+.card-productos__article:hover
+  animation: remove-overflow 2s forwards
+
+.card-productos__article:not(:hover)
+  animation: show-overflow 2s forwards    
+
+.card-productos__article:not(:hover) .card-productos__body
+  animation: remove-body 1s forwards         
+
+@keyframes show-data
+  50%
+    transform: translateY(-10rem)
+  100%
+    transform: translateY(-7rem)       
+
+@keyframes remove-overflow
+  to
+    overflow: initial  
+
+@keyframes remove-body
+  0%
+    transform: translateY(-7rem)  
+  50%
+    transform: translateY(-10rem)      
+  100%
+    transform: translateY(0.5rem)  
+
+@keyframes show-overflow
+  0%
+    overflow: initial
+    pointer-events: none
+  50% 
+    overflow: hidden
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 340px)
+  .container_productos
+    margin-inline: 1rem
+
+  .card-productos__body
+    width: 250px
+    padding: 1rem    
+
+@media screen and (min-width: 768px)
+  .card-productos
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 1.5rem
+
+@media screen and (min-width: 1120px)
+  .container_productos
+    height: 100vh
+
+  .card-productos
+    grid-template-columns: repeat(3, 1fr)
+
+  .card-productos__img
+    width: 348px
+
+  .card-productos__body
+    width: 316px
+    padding-inline: 2.5rem

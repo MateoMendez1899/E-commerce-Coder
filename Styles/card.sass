@@ -15,9 +15,13 @@
     width: 100%
 
 
-.card-productos 
+.card-main 
+  display: flex
+  flex-direction: column
   width: 100%
-  max-width: 300px
+  max-width: 350px
+  height: 100%
+  margin: 35px
   background-color: variables.$color-fondo
   border: 1px solid variables.$color-borde
   border-radius: variables.$radio-borde
@@ -28,28 +32,28 @@
   &:hover 
     transform: translateY(-5px)
   
-
   &__image 
     width: 100%
-    display: block
-    height: auto
+    height: 200px
     object-fit: cover
+    display: block
   
-
   &__body 
     padding: 16px
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
   
-
   &__title 
     margin: 0 0 8px
     font-size: 1.25rem
     color: variables.$color-texto
   
-
   &__text 
     margin: 0
     font-size: 1rem
-    color: darken(variables.$color-texto, 10%)
+    color: color.adjust(variables.$color-texto, $lightness: 10%)
   
 
 
@@ -107,12 +111,12 @@
     justify-content: space-between
     align-items: center
 
-    &--old
+    &--viejo
       text-decoration: line-through
       color: variables.$color-secundario
       font-size: 1rem
 
-    &--new
+    &--nuevo
       color: variables.$color-error
       font-weight: bold
       font-size: 1.2rem
