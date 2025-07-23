@@ -11,58 +11,59 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="../assets/AHC.png" alt="AHC" height="40" class="me-2 rounded">
-                <span class="fw-bold">AHC Tech</span>
+    <!-- Navbar -->
+    <nav class="navbar-custom">
+        <div class="navbar-container-custom">
+            <a href="index.html" class="brand">
+                <img src="./assets/AHC.png" alt="AHC" class="logo">
+                <span>AHC Tech</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+            <button class="toggle" id="navToggle" aria-label="Menú">
+                <i class="bi bi-list"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+
+            <div class="nav-links" id="navMenu">
+                <ul class="links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="./pages/productos.html">Productos</a></li>
+                    <li><a href="./pages/carrito.html">Carrito</a></li>
+                    <li><a href="./pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+
+                <ul class="auth">
+                    <li><a href="./pages/signup.html">Registrarse</a></li>
+                    <li><a href="./pages/singin.html" class="pulse">Iniciar sesión</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container py-4">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h2 class="card-title mb-4 text-center">Formulario de Contacto</h2>
-                        <form action="#" method="post">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Correo</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                        </form>
-                    </div>
+    <main class="container-main__color-fondo">
+        <div class="form-container">
+            <h2 class="">Formulario de Contacto</h2>
+            <form action="#" method="post" class="form">
+                <div class="form__row">
+                    <label for="nombre" class="form__label">Nombre</label>
+                    <input type="text" class="form__input-text" id="nombre" name="nombre" required>
                 </div>
-            </div>
+                <div class="form__row">
+                    <label for="email" class="">Correo</label>
+                    <input type="email" class="form__input-text" id="email" name="email" required>
+                </div>
+                <div class="form__row">
+                    <label for="mensaje" class="form__label">Mensaje</label>
+                    <textarea class="form__input-text" id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <div class="">
+                    <button type="submit" class="form__button">Enviar</button>
+                </div>
+            </form>
         </div>
     </main>
 
-    <footer class="bg-white border-top py-3 mt-auto text-center small fixed-footer">
-        <span>&copy; 2025 AHC Tech. Todos los derechos reservados.</span>
-    </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

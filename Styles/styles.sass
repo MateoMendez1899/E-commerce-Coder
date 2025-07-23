@@ -3,69 +3,18 @@
 @use 'nosotros.sass'
 @use 'botones.sass'
 @use 'card.sass'
+@use 'carousel.sass'
 @use 'footer.sass'
 @use 'imagenes.sass'
 @use 'inputs.sass'
 @use 'listas.sass'
 @use 'red-social.sass'
-@use 'sin-determinar.sass'
-@use 'section.sass'
 @use 'labels.sass'
 @use 'animations.sass'
 @use 'header.sass'
+@use 'formulario.sass'
 
-h1
-    font-size: variables.$titulo-xl
 
-button
-    background-color: variables.$color-primario
-    border-radius: variables.$radio-borde
-    padding: variables.$espaciado-sm variables.$espaciado-md
-
-label
-    color: variables.$color-primario
-
-input[name="radio-btn"]
-    display: none
-
-img[style*="max-width: 220px;"] 
-    max-width: 220px
-
-img[style*="max-width: 350px;"] 
-    max-width: 350px
-
-img[style*="max-width: 240px;"] 
-    max-width: 240px
-    display: block
-
-img[style*="margin-left: auto;"][style*="margin-right: auto;"] 
-    margin-left: auto
-    margin-right: auto
-
-div[style*="border-top: 1px solid #444"] 
-    border-top: 1px solid #444
-    width: 100%
-    margin: 0 auto 0.5rem auto
-
-article
-    width: 30% // Cada artículo ocupa el 30% del ancho del contenedor //
-    margin-bottom: 20px // Espacio entre los artículos //
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
-    h2
-        font-size: 20px
-        font-weight: 600
-        opacity: 80%
-        margin-bottom: 10px
-
-    img
-        width: 100%
-        height: auto
-        margin-bottom: 10px
-
-    p
-        font-size: 14px
-        color: #7A7A7A
 
 .container
     display: grid
@@ -115,17 +64,6 @@ article
         align-items: center
         gap: variables.$espaciado-sm
 
-.col-custom
-    flex: 1 1 calc(33.3333% - 1rem) // como col-md-4 pero con gap
-    display: flex // para que el contenido crezca
-
-.fila-custom
-    display: flex
-    flex-wrap: wrap
-    gap: 1.5rem
-    margin-bottom: 3rem
-    margin-top: 2rem
-    align-items: stretch // <-- clave para igualar la altura
 
 
 .container_productos
@@ -141,9 +79,9 @@ article
   row-gap: 3.5rem
 
 
-  // &__article
-  //   position: relative
-  //   overflow: hidden
+  &__article
+    position: relative
+    overflow: hidden
 
   &__img
     width: 100%
@@ -189,8 +127,8 @@ article
 
 .card-productos__article:hover .card-productos__body
  animation: show-data 1s forwards
-  opacity: 1
-  transition: opacity .3s
+ opacity: 1
+ transition: opacity .3s
 
 .card-productos__article:hover
   animation: remove-overflow 2s forwards
