@@ -2,27 +2,23 @@
 @use 'variables'
 
 .card.h-100.shadow-sm
-    transition: transform 0.2s cubic-bezier(.4, 2, .6, 1), box-shadow 0.2s
+  transition: transform 0.2s cubic-bezier(.4, 2, .6, 1), box-shadow 0.2s
 
-    &:hover
-        transform: translateY(-8px) scale(1.04)
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18), 0 1.5px 6px 0 rgba(0, 0, 0, 0.10)
-        z-index: 2
+  &:hover
+    transform: translateY(-8px) scale(1.04)
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18), 0 1.5px 6px 0 rgba(0, 0, 0, 0.10)
+    z-index: 2
 
 .card.shadow-sm.p-4[style],
 .card.shadow-sm.p-4[style="max-width: 400px; width: 100%;"]
-    max-width: 400px
-    width: 100%
+  max-width: 400px
+  width: 100%
 
-
-.card-main 
+.card-main
   display: flex
   flex-direction: column
   width: 100%
-  max-width: 350px
-  
   height: 100%
-  margin: 35px
   background-color: variables.$color-fondo
   border: 1px solid variables.$color-borde
   border-radius: variables.$radio-borde
@@ -30,40 +26,31 @@
   overflow: hidden
   transition: transform 0.3s ease
 
-  &:hover 
+  &:hover
     transform: translateY(-5px)
-  
-  &__image 
+
+  &__image
     width: 100%
     height: 200px
     object-fit: cover
     display: block
-   
-  
-  &__body 
+
+  &__body
     padding: 16px
     flex-grow: 1
     display: flex
     flex-direction: column
     justify-content: space-between
-  
-  &__title 
+
+  &__title
     margin: 0 0 8px
     font-size: 1.25rem
     color: variables.$color-texto
-  
-  &__text 
+
+  &__text
     margin: 0
     font-size: 1rem
     color: color.adjust(variables.$color-texto, $lightness: 10%)
-
-
-  
-
-
-
-
-
 
 .card-pequena
   background-color: white
@@ -140,7 +127,6 @@
     &:hover
       background-color: color.adjust(variables.$color-primario, $lightness: -10%)
 
-
 .cards-container
   display: flex
   flex-wrap: wrap
@@ -148,14 +134,11 @@
   justify-content: center
   padding: variables.$espaciado-xl
   max-width: variables.$ancho-maximo
-  margin: 0 auto    
-
-
+  margin: 0 auto
 
 .card-productos
   display: grid
   row-gap: 3.5rem
-
 
   &__article
     position: relative
@@ -164,7 +147,6 @@
   &__img
     width: 100%
     border-radius: variables.$radio-borde
-   
 
   &__body
     width: 288px
@@ -173,19 +155,17 @@
     box-shadow: variables.$sombra-media
     border-radius: 1rem
     position: absolute
-    bottom: -9rem   
+    bottom: -9rem
     left: 0
     right: 0
-    margin-inline: auto 
+    margin-inline: auto
     opacity: 0
     transition: opacity 1s 1s
-
 
   &__text
     display: block
     font-size: variables.$tamanio-texto
     margin-bottom: .25rem
-   
 
   &__title
     font-size: variables.$titulo-md
@@ -198,48 +178,48 @@
     font-size: variables.$tam-text-buttom
     font-weight: 500
     color: variables.$color-exito
-    background-color: none  
+    background-color: none
 
   &:hover &__button
     text-decoration: underline
 
 .card-productos__article:hover .card-productos__body
- animation: show-data 1s forwards
- opacity: 1
- transition: opacity .3s
+  animation: show-data 1s forwards
+  opacity: 1
+  transition: opacity .3s
 
 .card-productos__article:hover
   animation: remove-overflow 2s forwards
 
 .card-productos__article:not(:hover)
-  animation: show-overflow 2s forwards    
+  animation: show-overflow 2s forwards
 
 .card-productos__article:not(:hover) .card-productos__body
-  animation: remove-body 1s forwards         
+  animation: remove-body 1s forwards
 
 @keyframes show-data
   50%
     transform: translateY(-10rem)
   100%
-    transform: translateY(-7rem)       
+    transform: translateY(-7rem)
 
 @keyframes remove-overflow
   to
-    overflow: initial  
+    overflow: initial
 
 @keyframes remove-body
   0%
-    transform: translateY(-7rem)  
+    transform: translateY(-7rem)
   50%
-    transform: translateY(-10rem)      
+    transform: translateY(-10rem)
   100%
-    transform: translateY(0.5rem)  
+    transform: translateY(0.5rem)
 
 @keyframes show-overflow
   0%
     overflow: initial
     pointer-events: none
-  50% 
+  50%
     overflow: hidden
 
 // MEDIA QUERIES
@@ -250,12 +230,21 @@
 
   .card-productos__body
     width: 250px
-    padding: 1rem    
+    padding: 1rem
 
 @media screen and (min-width: 768px)
   .card-productos
     grid-template-columns: repeat(2, 1fr)
     column-gap: 1.5rem
+
+@media(max-width: 768px)
+  .card-main
+    min-height: 500px
+    &__image
+      width: 100%
+      height: 300px
+      object-fit: cover
+      display: block
 
 @media screen and (min-width: 1120px)
   .container_productos
@@ -269,7 +258,7 @@
 
   .card-productos__body
     width: 316px
-    padding-inline: 2.5rem  
+    padding-inline: 2.5rem
 
 .card-info
   border-radius: variables.$radio-borde-xl
