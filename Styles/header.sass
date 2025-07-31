@@ -6,106 +6,155 @@
     padding: 0.5rem 1rem
 
 .navbar-container-custom
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  margin: 0 auto
+  flex-wrap: wrap
+  position: relative
+
+  .brand
+    flex: 1
+    display: flex
+    align-items: center
+    gap: 0.5rem
+    font-weight: 700
+    font-size: 1.2rem
+    text-decoration: none
+    color: inherit
+
+    span
+      &:hover
+        color: variables.$color-hover
+
+  .logo
+    height: 40px
+    border-radius: variables.$radio-borde
+
+  .toggle
+    display: none
+    font-size: 1.8rem
+    background: none
+    border: none
+    color: variables.$color-texto
+    cursor: pointer
+
+  .nav-links
+    flex: 3
     display: flex
     align-items: center
     justify-content: space-between
-    width: 100%
-    margin: 0 auto
     flex-wrap: wrap
+    gap: 1rem
+    width: 100%
 
-    .brand
-        flex: 1
-        display: flex
-        align-items: center
-        gap: 0.5rem
-        font-weight: 700
-        font-size: 1.2rem
-        text-decoration: none
-        color: inherit
+    &.active
+      display: flex
 
-        span
-            &:hover
-                color: variables.$color-hover
+  .links
+    flex: 1
+    display: flex
+    justify-content: center
+    list-style: none
+    gap: 1rem
+    margin: 0
+    padding: 0
 
-    .logo
-        height: 40px
-        border-radius: variables.$radio-borde 
+    a
+      text-decoration: none
+      font-weight: 500
+      color: variables.$color-texto
+      transition: color 0.2s ease
+
+      &:hover
+        color: variables.$color-hover
+
+  .search
+    display: flex
+    align-items: center
+    gap: 0.5rem
+
+    input
+      padding: 0.4rem 0.6rem
+      border: 1px solid #ccc
+      border-radius: variables.$radio-borde
+      outline: none
+      transition: border 0.2s ease
+
+      &:focus
+        border-color: variables.$color-hover
+
+    button
+      background-color: transparent
+      border: 1px solid variables.$color-texto
+      color: variables.$color-texto
+      padding: 0.4rem 0.6rem
+      border-radius: variables.$radio-borde
+      cursor: pointer
+      transition: color 0.2s ease, border-color 0.2s ease
+
+      &:hover
+        color: variables.$color-hover
+        border-color: variables.$color-hover
+
+  .auth
+    display: flex
+    align-items: center
+    gap: 1rem
+    list-style: none
+    margin: 0
+    padding: 0
+
+    a
+      text-decoration: none
+      font-weight: 500
+      color: variables.$color-texto
+      transition: color 0.2s ease
+
+      &:hover
+        color: variables.$color-hover
+
+      &.pulse
+        animation: pulse 1.5s infinite
+        color: variables.$color-hover
+
+// ------------------------
+// MEDIA QUERY RESPONSIVE
+// ------------------------
+
+@media (max-width: 768px)
+  .navbar-container-custom
+    flex-direction: column
+    align-items: flex-start
+
+    .toggle
+      display: block
+      position: absolute
+      right: 1rem
+      top: 1rem
 
     .nav-links
-        flex: 3
+      display: none
+      flex-direction: column
+      align-items: flex-start
+      width: 100%
+      margin-top: 1rem
+
+      &.active
         display: flex
-        align-items: center
-        justify-content: space-between
-        flex-wrap: wrap
-        gap: 1rem
-        width: 100%
 
-    .links
-        flex: 1
-        display: flex
-        justify-content: center
-        list-style: none
-        gap: 1rem
-        margin: 0
-        padding: 0
-
-        a
-            text-decoration: none
-            font-weight: 500
-            color: variables.$color-texto
-            transition: color 0.2s ease
-
-            &:hover
-                color: variables.$color-hover
+    .links,
+    .auth
+      flex-direction: column
+      width: 100%
+      align-items: flex-start
+      padding-left: 1rem
 
     .search
-        display: flex
-        align-items: center
-        gap: 0.5rem
-
-        input
-            padding: 0.4rem 0.6rem
-            border: 1px solid #ccc
-            border-radius: variables.$radio-borde
-            outline: none
-            transition: border 0.2s ease
-
-            &:focus
-                border-color: variables.$color-hover
-
-        button
-            background-color: transparent
-            border: 1px solid variables.$color-texto
-            color: variables.$color-texto
-            padding: 0.4rem 0.6rem
-            border-radius: variables.$radio-borde
-            cursor: pointer
-            transition: color 0.2s ease, border-color 0.2s ease
-
-            &:hover
-                color: variables.$color-hover
-                border-color: variables.$color-hover
-
-    .auth
-        display: flex
-        align-items: center
-        gap: 1rem
-        list-style: none
-        margin: 0
-        padding: 0
-
-        a
-            text-decoration: none
-            font-weight: 500
-            color: variables.$color-texto
-            transition: color 0.2s ease
-
-            &:hover
-                color: variables.$color-hover
-
-            &.pulse
-                animation: pulse 1.5s infinite
-                color: variables.$color-hover
+      width: 100%
+      justify-content: flex-start
+      padding-left: 1rem
 
 .toggle
     display: none

@@ -20,6 +20,7 @@
   flex-direction: column
   width: 100%
   max-width: 350px
+  
   height: 100%
   margin: 35px
   background-color: variables.$color-fondo
@@ -37,6 +38,7 @@
     height: 200px
     object-fit: cover
     display: block
+   
   
   &__body 
     padding: 16px
@@ -54,6 +56,8 @@
     margin: 0
     font-size: 1rem
     color: color.adjust(variables.$color-texto, $lightness: 10%)
+
+
   
 
 
@@ -145,3 +149,134 @@
   padding: variables.$espaciado-xl
   max-width: variables.$ancho-maximo
   margin: 0 auto    
+
+
+
+.card-productos
+  display: grid
+  row-gap: 3.5rem
+
+
+  &__article
+    position: relative
+    overflow: hidden
+
+  &__img
+    width: 100%
+    border-radius: variables.$radio-borde
+   
+
+  &__body
+    width: 288px
+    background-color: variables.$color-fondo
+    padding: 1.5rem 2rem
+    box-shadow: variables.$sombra-media
+    border-radius: 1rem
+    position: absolute
+    bottom: -9rem   
+    left: 0
+    right: 0
+    margin-inline: auto 
+    opacity: 0
+    transition: opacity 1s 1s
+
+
+  &__text
+    display: block
+    font-size: variables.$tamanio-texto
+    margin-bottom: .25rem
+   
+
+  &__title
+    font-size: variables.$titulo-md
+    font-weight: 500
+    color: variables.$color-texto
+    margin-bottom: .75rem
+
+  &__button
+    text-decoration: none
+    font-size: variables.$tam-text-buttom
+    font-weight: 500
+    color: variables.$color-exito
+    background-color: none  
+
+  &:hover &__button
+    text-decoration: underline
+
+.card-productos__article:hover .card-productos__body
+ animation: show-data 1s forwards
+ opacity: 1
+ transition: opacity .3s
+
+.card-productos__article:hover
+  animation: remove-overflow 2s forwards
+
+.card-productos__article:not(:hover)
+  animation: show-overflow 2s forwards    
+
+.card-productos__article:not(:hover) .card-productos__body
+  animation: remove-body 1s forwards         
+
+@keyframes show-data
+  50%
+    transform: translateY(-10rem)
+  100%
+    transform: translateY(-7rem)       
+
+@keyframes remove-overflow
+  to
+    overflow: initial  
+
+@keyframes remove-body
+  0%
+    transform: translateY(-7rem)  
+  50%
+    transform: translateY(-10rem)      
+  100%
+    transform: translateY(0.5rem)  
+
+@keyframes show-overflow
+  0%
+    overflow: initial
+    pointer-events: none
+  50% 
+    overflow: hidden
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 340px)
+  .container_productos
+    margin-inline: 1rem
+
+  .card-productos__body
+    width: 250px
+    padding: 1rem    
+
+@media screen and (min-width: 768px)
+  .card-productos
+    grid-template-columns: repeat(2, 1fr)
+    column-gap: 1.5rem
+
+@media screen and (min-width: 1120px)
+  .container_productos
+    height: 100vh
+
+  .card-productos
+    grid-template-columns: repeat(3, 1fr)
+
+  .card-productos__img
+    width: 348px
+
+  .card-productos__body
+    width: 316px
+    padding-inline: 2.5rem  
+
+.card-info
+  border-radius: variables.$radio-borde-xl
+  height: 100%
+  padding: 1.5rem
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)
+  &__borderless
+    background: rgb(248 249 250)
+  &__borderblue
+    border: 2px solid rgba(13, 110, 253, 1)

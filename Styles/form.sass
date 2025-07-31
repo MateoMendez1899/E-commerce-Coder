@@ -99,3 +99,159 @@ form .contraseña
 
 .facebook
     background: #1976D2
+
+
+
+.body-iniciarsesion 
+  min-height: 100vh
+  overflow: hidden
+  background: variables.$color-fondo-sesion
+  display: flex
+  flex-direction: column
+  
+
+    
+.iniciarsesion-layout 
+  display: flex
+  flex-direction: column
+  height: 100vh
+  overflow: hidden
+
+
+
+.navbar-iniciarsesion 
+  height: variables.$altura-header
+  background-color: variables.$color-fondo-sesion   
+  box-shadow: variables.$sombra-suave
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+
+  
+
+
+.form-iniciarsesion-wrapper 
+  flex-grow: 1
+  display: flex
+  justify-content: center
+  align-items: center
+  background: variables.$color-fondo-sesion
+  padding: variables.$espaciado-md
+  overflow: hidden
+
+
+.form-iniciarsesion-container 
+  background: variables.$color-fondo
+  padding: variables.$espaciado-xl
+  border-radius: variables.$radio-borde
+  box-shadow: variables.$sombra-intensa
+  width: 100%
+  max-width: 400px
+
+  h2 
+    text-align: center
+    color: variables.$color-texto
+    font-size: variables.$titulo-md
+    margin-bottom: variables.$espaciado-lg
+  
+
+
+.form-iniciarsesion-group 
+  margin-bottom: variables.$espaciado-md
+
+  label 
+    display: block
+    margin-bottom: variables.$espaciado-sm
+    color: variables.$color-secundario
+    font-size: variables.$tamanio-texto
+  
+
+  input 
+    width: 100%
+    padding: variables.$espaciado-sm variables.$espaciado-md
+    border: 1px solid variables.$color-borde
+    border-radius: variables.$radio-borde
+    font-size: variables.$tamanio-texto
+    outline: none
+
+    &:focus 
+      border-color: variables.$color-exito
+      box-shadow: 0 0 0 3px rgba(248, 95, 106, 0.2)
+
+   
+
+.form-iniciarsesion-button 
+  width: 100%
+  height: variables.$alto-button
+  background-color: variables.$color-fondo-button
+  color: variables.$color-button-texto
+  border: none
+  border-radius: variables.$radio-borde
+  font-size: variables.$tam-text-buttom
+  font-weight: bold
+  cursor: pointer
+  transition: background-color 0.3s ease, transform 0.2s ease
+
+  &:hover 
+    background-color: variables.$color-hover
+    transform: scale(1.02)
+  
+
+
+.form-iniciarsesion-link 
+  text-align: center
+  margin-top: variables.$espaciado-md
+  font-size: variables.$tamanio-texto
+
+  a 
+    color: variables.$color-primario
+    text-decoration: none
+
+    &:hover 
+      text-decoration: underline
+
+
+  
+
+
+
+.footer-iniciarsesion
+  background-color: variables.$color-fondo-sesion
+  color: #ffffff86
+  text-align: center
+  padding: 1rem 1rem 
+  font-size: 1rem  
+  margin-top: auto
+
+  p 
+    margin: 0
+  
+
+
+
+
+@media (max-width: 480px) 
+  .form-iniciarsesion-container 
+    padding: variables.$espaciado-lg variables.$espaciado-md
+  
+
+  .form-iniciarsesion-button 
+    font-size: 16px
+    height: 44px
+  
+
+  .form-iniciarsesion-group input 
+    padding: variables.$espaciado-sm
+  
+
+  .navbar-iniciarsesion-logo 
+    height: 50px
+    width: 50px
+  
+
+
+    
+
+  
+    

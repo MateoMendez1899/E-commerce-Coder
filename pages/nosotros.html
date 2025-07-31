@@ -48,11 +48,11 @@
             </div>
         </section>
         <!-- Valores y Misión -->
-        <section class="row g-4 mb-5">
+        <section class="container-row">
             <div class="col-md-4">
-                <div class="bg-light rounded-4 p-4 h-100 shadow-sm text-center">
-                    <h3 class="fw-bold text-success mb-3">Nuestros Valores</h3>
-                    <ul class="list-unstyled mb-0">
+                <div class="card-info card-info__borderless">
+                    <h3 class="title">Nuestros Valores</h3>
+                    <ul class="lista-sin-viñetas">
                         <li>✔️ Innovación constante</li>
                         <li>✔️ Compromiso con el cliente</li>
                         <li>✔️ Transparencia y ética</li>
@@ -62,38 +62,39 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="bg-white rounded-4 p-4 h-100 shadow-sm text-center border border-2 border-primary">
-                    <h3 class="fw-bold text-primary mb-3">Nuestra Misión</h3>
+                <div class="card-info card-info__borderblue">
+                    <h3 class="title title--blue">Nuestra Misión</h3>
                     <p>Brindar soluciones tecnológicas de calidad que mejoren la vida de las personas y potencien el
                         crecimiento de empresas y comunidades.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="bg-light rounded-4 p-4 h-100 shadow-sm text-center">
-                    <h3 class="fw-bold text-warning mb-3">Nuestra Visión</h3>
+                <div class="card-info card-info__borderless">
+                    <h3 class="title title--yellow">Nuestra Visión</h3>
                     <p>Ser referentes en innovación tecnológica en Latinoamérica, inspirando confianza y superando
                         expectativas.</p>
                 </div>
             </div>
         </section>
         <!-- Historia e Hitos -->
-        <section class="row align-items-center mb-5 flex-md-row-reverse">
-            <div class="col-md-6 mb-4 mb-md-0">
-                <h2 class="fw-bold mb-3">Nuestra Historia</h2>
+        <section class="container-space-around">
+
+            <div class="m-sm">
+                <img src="../assets/TeamAHC.png" class="img-rounded" alt="Team AHC">
+            </div>
+
+            <div class="m-sm">
+                <h2 class="title">Nuestra Historia</h2>
                 <p>Fundada en 2020 por entusiastas de la tecnología, AHC Tech nació con el sueño de acercar lo último en
                     hardware y servicios a todos los rincones del país. Desde nuestros inicios, apostamos por la
                     excelencia y la cercanía con nuestros clientes.</p>
-                <ul class="timeline list-unstyled mt-4">
-                    <li><span class="badge bg-primary">2020</span> Fundación de AHC Tech</li>
-                    <li><span class="badge bg-success">2021</span> Lanzamiento de nuestra tienda online</li>
-                    <li><span class="badge bg-warning text-dark">2022</span> Primeros 1000 clientes satisfechos</li>
-                    <li><span class="badge bg-info text-dark">2023</span> Expansión a nivel nacional</li>
-                    <li><span class="badge bg-dark">2025</span> Comunidad de más de 10.000 usuarios</li>
+                <ul class="lista-sin-viñetas">
+                    <li><span class="label bg-blue">2020</span> Fundación de AHC Tech</li>
+                    <li><span class="label bg-green">2021</span> Lanzamiento de nuestra tienda online</li>
+                    <li><span class="label bg-yellow">2022</span> Primeros 1000 clientes satisfechos</li>
+                    <li><span class="label bg-turquoise">2023</span> Expansión a nivel nacional</li>
+                    <li><span class="label bg-dark">2025</span> Comunidad de más de 10.000 usuarios</li>
                 </ul>
-            </div>
-            <div class="col-md-6 text-center">
-                <img src="../assets/TeamAHC.png" class="img-fluid rounded-4 shadow" alt="Team AHC"
-                    style="max-width: 350px;">
             </div>
         </section>
         <!-- Dinámica visual: Frase destacada -->
@@ -105,10 +106,9 @@
             </blockquote>
         </section>
         <!-- Equipo y cultura -->
-        <section class="row align-items-center mb-5">
-            <div class="col-12 mb-4 text-center">
-                <img src="../assets/banner.png" class="img-fluid rounded-4 shadow nosotros-banner-equipo"
-                    alt="Banner AHC">
+        <section class="container-fluid">
+            <div class="img-slim">
+                <img src="../assets/banner.png" class="img-rounded" alt="Banner AHC">
             </div>
             <div class="col-md-7">
                 <h2 class="fw-bold mb-3">Nuestro Equipo</h2>
@@ -119,37 +119,36 @@
                     <li>Soporte técnico dedicado</li>
                     <li>Asesores comerciales y de innovación</li>
                 </ul>
-                <div class="text-center mt-4">
-                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-4 justify-content-center nosotros-directivos-grid">
-                        <div class="col d-flex flex-column align-items-center">
-                            <img src="../assets/ceodeempresa.png" class="img-fluid rounded-4 shadow mb-3"
-                                alt="CEO de Empresa" style="max-width: 240px; display: block;">
-                            <div class="bg-light rounded-4 p-3 shadow-sm d-inline-block w-100 text-center">
-                                <strong>CEO de Empresa</strong>
-                                <p class="mb-0">CEO e Ingeniero en Sistemas, enfocado en la innovación tecnológica y la
-                                    creación de soluciones digitales que impulsan el crecimiento empresarial.</p>
-                            </div>
+                <section class="home">
+                    <div class="card-main">
+                       <img src="./assets/nvidia_h100.jpg" class="card-main__image" alt="NVIDIA H100">
+                       <div class="card-main__body">
+                           <h5 class="card-main__title">Visto recientemente</h5>
+                           <p class="card-main__text">Descubre los productos que has explorado últimamente y vuelve a ellos
+                               fácilmente.
+                           </p>
                         </div>
-                        <div class="col d-flex flex-column align-items-center">
-                            <img src="../assets/ctodeempresa.png" class="img-fluid rounded-4 shadow mb-3"
-                                alt="CTO de Empresa" style="max-width: 240px; display: block;">
-                            <div class="bg-light rounded-4 p-3 shadow-sm d-inline-block w-100 text-center">
-                                <strong>CTO de Empresa</strong>
-                                <p class="mb-0">CTO y Arquitecto de Soluciones, responsable de liderar la estrategia
-                                    tecnológica, la innovación en infraestructura y el desarrollo de productos de alto
-                                    rendimiento para AHC Tech.</p>
-                            </div>
+                   </div>
+                    <div class="card-main">
+                       <img src="./assets/nvidia_h100.jpg" class="card-main__image" alt="NVIDIA H100">
+                       <div class="card-main__body">
+                           <h5 class="card-main__title">Visto recientemente</h5>
+                           <p class="card-main__text">Descubre los productos que has explorado últimamente y vuelve a ellos
+                               fácilmente.
+                           </p>
                         </div>
-                    </div>
-                    <img src="../assets/gatoceo.png" class="img-fluid rounded-4 shadow mb-3" alt="Gato CEO"
-                        style="max-width: 220px; display: block; margin-left: auto; margin-right: auto;">
-                    <div class="bg-light rounded-4 p-3 shadow-sm mt-2 d-inline-block">
-                        <strong>Trabajador del año</strong>
-                        <p class="mb-0">Cabezon. Nuestro líder felino, experto en siestas estratégicas y motivador de
-                            equipos. Siempre encuentra la solución más creativa (y peluda) a cualquier desafío
-                            tecnológico.</p>
-                    </div>
-                </div>
+                   </div>
+                    <div class="card-main">
+                       <img src="./assets/nvidia_h100.jpg" class="card-main__image" alt="NVIDIA H100">
+                       <div class="card-main__body">
+                           <h5 class="card-main__title">Visto recientemente</h5>
+                           <p class="card-main__text">Descubre los productos que has explorado últimamente y vuelve a ellos
+                               fácilmente.
+                           </p>
+                        </div>
+                   </div>
+
+                </section>
             </div>
         </section>
     </main>

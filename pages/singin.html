@@ -1,72 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sign In | AHC Tech</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/styles.css">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 
-<body class="bg-light">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="../assets/AHC.png" alt="AHC" height="40" class="me-2 rounded">
-        <span class="fw-bold">AHC Tech</span>
+
+<body class="body-iniciarsesion ">
+  <div class="iniciarsesion-layout">
+    <!-- Navbar -->
+<header class="navbar-iniciarsesion">
+ <nav >
+    <div class="navbar-container-custom">
+      <a href="../index.html" class="brand">
+        <img src="../assets/AHC.png" alt="AHC" class="logo">
+        
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
+    </nav> 
+</header>
+    <!-- Contenido principal -->
+    <main class="form-iniciarsesion-wrapper">
+      <div class="form-iniciarsesion-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="#" method="POST">
+          <div class="form-iniciarsesion-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div class="form-iniciarsesion-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
+          </div>
+          <button type="submit" class="form-iniciarsesion-button">Ingresar</button>
+        </form>
+        <div class="form-iniciarsesion-link">
+          ¿No tenés cuenta? <a href="signup.html">Registrate</a>
+        </div>
       </div>
-    </div>
-  </nav>
-  <div class="container d-flex align-items-center justify-content-center min-vh-100 singin-padding">
-    <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%;">
-      <div class="text-center mb-4">
-        <img src="../assets/AHC.png" alt="AHC" height="48" class="mb-2 rounded">
-        <h1 class="h4 fw-bold">Iniciar sesión</h1>
-        <p class="text-muted">¡Bienvenido de nuevo!</p>
-      </div>
-      <form method="post">
-        <div class="mb-3">
-          <label for="username" class="form-label">Nombre de Usuario</label>
-          <input class="form-control" type="text" id="username" required>
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Contraseña</label>
-          <input class="form-control" type="password" id="password" required>
-        </div>
-        <button class="btn btn-primary w-100 mb-3" type="submit">Iniciar sesión</button>
-        <div class="text-center mb-2">
-          <span class="text-muted">O usa tus redes sociales</span>
-        </div>
-        <div class="d-flex justify-content-center gap-2 mb-3">
-          <button class="btn btn-outline-dark rounded-circle p-2" type="button"><img src="../assets/X.png" alt="X"
-              height="24"></button>
-          <button class="btn btn-outline-primary rounded-circle p-2" type="button"><img src="../assets/facebook.png"
-              alt="Facebook" height="24"></button>
-        </div>
-        <div class="d-flex justify-content-between">
-          <a href="#" class="small">¿Olvidaste tu contraseña?</a>
-          <a href="signup.html" class="small">Crear cuenta</a>
-        </div>
-      </form>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-iniciarsesion">
+      <p>2025 AHC Tech. Todos los derechos reservados.</p>
+    </footer>
   </div>
-  <footer class="bg-white border-top py-3 mt-auto text-center small fixed-footer">
-    <span>&copy; 2025 AHC Tech. Todos los derechos reservados.</span>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

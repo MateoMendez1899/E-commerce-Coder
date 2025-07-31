@@ -33,26 +33,28 @@
     </nav>
     <main class="container_main">
         <h1 class="mb-4 fw-bold text-center">Todos los Productos</h1>
-        <form class="row g-3 mb-4 justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <input type="search" class="form-control" placeholder="Buscar producto..." aria-label="Buscar producto">
-            </div>
-            <div class="col-md-4 col-lg-3">
-                <select class="form-select" aria-label="Filtrar por categoría">
-                    <option selected value="">Todas las categorías</option>
-                    <option value="perifericos">Periféricos</option>
-                    <option value="mothers">Mothers</option>
-                    <option value="cpus">CPUs</option>
-                    <option value="gpus">GPUs</option>
-                    <option value="fuentes">Fuentes</option>
-                    <option value="rams">RAMs</option>
-                    <option value="ssds">SSDs</option>
-                </select>
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </div>
-        </form>
+     <form class="filtro-productos-form">
+  <div class="filtro-productos-group">
+    <input type="search" class="input-busqueda" placeholder="Buscar producto..." aria-label="Buscar producto">
+  </div>
+
+  <div class="filtro-productos-group">
+    <select class="select-categoria" aria-label="Filtrar por categoría">
+      <option selected value="">Todas las categorías</option>
+      <option value="perifericos">Periféricos</option>
+      <option value="mothers">Mothers</option>
+      <option value="cpus">CPUs</option>
+      <option value="gpus">GPUs</option>
+      <option value="fuentes">Fuentes</option>
+      <option value="rams">RAMs</option>
+      <option value="ssds">SSDs</option>
+    </select>
+  </div>
+
+  <div class="filtro-productos-group">
+    <button type="submit" class="btn-buscar">Buscar</button>
+  </div>
+</form>
  <div class="container_productos">
      <div class="card-productos">
              <article class="card-productos__article">

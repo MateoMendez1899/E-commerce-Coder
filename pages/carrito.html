@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Carrito de Compras | AHC Tech</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../styles/styles.css">
   <!-- styles moved to styles.css -->
 </head>
@@ -33,70 +34,102 @@
     </div>
   </nav>
 
-  <main class="container py-4">
-    <h1 class="mb-4 fw-bold text-center">Tu Carrito</h1>
-    <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card shadow-sm h-100">
-          <div class="row g-0 align-items-center">
-            <div class="col-4">
-              <img src="../assets/mouse.jpg" class="img-fluid rounded-start" alt="Mouse Gamer">
-            </div>
-            <div class="col-8">
-              <div class="card-body">
-                <h5 class="card-title">Mouse Gamer RGB</h5>
-                <div class="input-group mb-2">
-                  <span class="input-group-text">Cantidad</span>
-                  <input type="number" class="form-control" value="1" min="1">
-                </div>
-                <div class="fw-bold text-primary">$49.99</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card shadow-sm h-100">
-          <div class="row g-0 align-items-center">
-            <div class="col-4">
-              <img src="../assets/teclado.jpg" class="img-fluid rounded-start" alt="Teclado Mecánico">
-            </div>
-            <div class="col-8">
-              <div class="card-body">
-                <h5 class="card-title">Teclado Mecánico</h5>
-                <div class="input-group mb-2">
-                  <span class="input-group-text">Cantidad</span>
-                  <input type="number" class="form-control" value="1" min="1">
-                </div>
-                <div class="fw-bold text-primary">$89.99</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card shadow-sm h-100">
-          <div class="row g-0 align-items-center">
-            <div class="col-4">
-              <img src="../assets/auris.jpg" class="img-fluid rounded-start" alt="Auriculares Inalámbricos">
-            </div>
-            <div class="col-8">
-              <div class="card-body">
-                <h5 class="card-title">Auriculares Inalámbricos</h5>
-                <div class="input-group mb-2">
-                  <span class="input-group-text">Cantidad</span>
-                  <input type="number" class="form-control" value="1" min="1">
-                </div>
-                <div class="fw-bold text-primary">$69.99</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <main class="container-main">
+<nav class="nav-carrito">
+  <div class="icono-carrito">
+    <i class="fas fa-shopping-cart"></i>
+
+    <div class="buy-card-carrito">
+      <ul class="bolso">
+        <li>Imagen</li>
+        <li>Nombre</li>
+        <li>Precio</li>
+        <li>Cantidad</li>
+      </ul>
+      <button>Vaciar Carrito</button>
     </div>
-    <div class="text-end mt-4">
-      <span class="fs-4 fw-bold">Total: $209.97</span>
-    </div>
+  </div>
+</nav>
+      <h1 class="align-self-center">Carrito de Compras</h1>
+
+      <div class="grid-carrito">
+          <div class="items-carrito">
+            <img src="../assets/mouse.jpg" class="card-pequena__image">
+            <div class="info-carrito">
+              <h3>Logitech G203</h3>
+              <p>Precisión y velocidad con estilo RGB. Ideal para gaming competitivo.</p>
+              <div class="card-pequena__price">
+                    <p class="card-pequena__price--viejo">$39.990</p>
+                    <p class="card-pequena__price--nuevo">$27.500</p>
+              </div>
+              <button>Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="items-carrito">
+            <img src="../assets/monitor.jpg" class="card-pequena__image">
+            <div class="info-carrito">
+              <h3>Monitor Samsung</h3>
+              <p>Full HD, con panel IPS y diseño sin bordes. Calidad visual y confort diario.</p>
+              <div class="card-pequena__price">
+                    <p class="card-pequena__price--viejo">$350.000</p>
+                    <p class="card-pequena__price--nuevo">$175.000</p>
+              </div>
+              <button>Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="items-carrito">
+            <img src="../assets/teclado.jpg" class="card-pequena__image">
+            <div class="info-carrito">
+              <h3>Teclado Redragon</h3>
+              <p>Switches mecánicos, retroiluminación RGB y construcción robusta.</p>
+              <div class="card-pequena__price">
+                    <p class="card-pequena__price--viejo">$60.000</p>
+                    <p class="card-pequena__price--nuevo">$45.000</p>
+              </div>
+              <button>Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="items-carrito">
+            <img src="../assets/auris.jpg" class="card-pequena__image">
+            <div class="info-carrito">
+              <h3>Auriculares Hyperx</h3>
+              <p>Sonido potente, micrófono con cancelación de ruido y almohadillas confortables.</p>
+              <div class="card-pequena__price">
+                    <p class="card-pequena__price--viejo">$223.200</p>
+                    <p class="card-pequena__price--nuevo">$98.700</p>
+              </div>
+              <button>Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="items-carrito">
+            <img src="../assets/ram.jpg" class="card-pequena__image">
+            <div class="info-carrito">
+              <h3>RAM Fury</h3>
+              <p>Alta velocidad y diseño de bajo perfil. Ideal para gaming, diseño o upgrades de rendimiento.</p>
+              <div class="card-pequena__price">
+                    <p class="card-pequena__price--viejo">$55.900</p>
+                    <p class="card-pequena__price--nuevo">$39.500</p>
+              </div>
+              <button>Agregar al Carrito</button>
+            </div>
+          </div>
+          <div class="items-carrito">
+            <img src="../assets/mouse.jpg" class="card-pequena__image">
+            <div class="info-carrito">
+              <h3>Fuente Kyber</h3>
+              <p>Fuente de alimentación Kyber con potencia confiable y protección contra sobrecargas.</p>
+              <div class="card-pequena__price">
+                    <p class="card-pequena__price--viejo">$199.000</p>
+                    <p class="card-pequena__price--nuevo">$152.999</p>
+              </div>
+              <button>Agregar al Carrito</button>
+            </div>
+          </div>
+           
+
+      </div>
+
+    
   </main>
 
   <footer class="bg-white border-top py-3 mt-auto text-center small fixed-footer">
