@@ -1,70 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contacto | AHC Tech</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="../Styles/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar-custom">
-        <div class="navbar-container-custom">
-            <a href="index.html" class="brand">
-                <img src="../assets/AHC.png" alt="AHC" class="logo">
-                <span>AHC Tech</span>
+
+<body class="">
+ 
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/AHC.png" alt="AHC" height="40" class="me-2 rounded">
+                <span class="fw-bold">AHC Tech</span>
             </a>
-
-            <button class="toggle" id="navToggle" aria-label="Menú">
-                <i class="bi bi-list"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="nav-links" id="navMenu">
-                <ul class="links">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="carrito.html">Carrito</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                </ul>
-
-                <ul class="auth">
-                    <li><a href="signup.html">Registrarse</a></li>
-                    <li><a href="singin.html" class="pulse">Iniciar sesión</a></li>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <main class="form-iniciarsesion-wrapper">
-  <div class="form-iniciarsesion-container">
-    <h2>Contacto</h2>
-    <form action="#" method="POST">
-      
-      <div class="form-iniciarsesion-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+    <!-- Contenido principal -->
+    <main class="form-iniciarsesion-wrapper ">
+      <div class="form-iniciarsesion-container">
+        <h2>Contacto</h2>
+        <form action="#" method="POST">
+          <div class="form-iniciarsesion-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+          </div>
+          <div class="form-iniciarsesion-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+          <div class="form-iniciarsesion-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+          </div>
+          <button type="submit" class="form-iniciarsesion-button">Enviar mensaje</button>
+        </form>
       </div>
+    </main>
 
-      <div class="form-iniciarsesion-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
-      </div>
-
-      <div class="form-iniciarsesion-group">
-        <label for="mensaje">Mensaje de Contacto</label>
-        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
-      </div>
-
-      <button type="submit" class="form-iniciarsesion-button">Enviar</button>
-    </form>
-  </div>
-</main>
-
-
+    <!-- Footer -->
+  <footer class="bg-white border-top py-3 mt-auto text-center small footer-fadein ">
+        <span>&copy; 2025 AHC Tech. Todos los derechos reservados.</span>
+    </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

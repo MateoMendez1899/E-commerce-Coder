@@ -128,6 +128,7 @@ form .contraseña
   justify-content: center
   flex-shrink: 0
 
+
   
 
 
@@ -167,13 +168,16 @@ form .contraseña
     font-size: variables.$tamanio-texto
   
 
-  input 
+  input,
+  textarea
     width: 100%
-    padding: variables.$espaciado-sm variables.$espaciado-md
+    padding: variables.$espaciado-sm
     border: 1px solid variables.$color-borde
     border-radius: variables.$radio-borde
     font-size: variables.$tamanio-texto
     outline: none
+    resize: vertical 
+    box-sizing: border-box
 
     &:focus 
       border-color: variables.$color-exito
@@ -249,6 +253,13 @@ form .contraseña
     height: 50px
     width: 50px
   
+
+@media (min-width: 1200px) 
+  .form-iniciarsesion-wrapper 
+    padding: 3rem 10vw // más espacio a los lados en pantallas grandes
+    
+  
+
 
 
     

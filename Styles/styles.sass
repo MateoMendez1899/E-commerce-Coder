@@ -21,7 +21,9 @@
 
 .container-main
   display: flex
+  flex: 1
   flex-direction: column
+  padding-bottom: 60px
   padding: variables.$espaciado-md
   gap: variables.$espaciado-sm
 
@@ -67,6 +69,7 @@
 
 .container_productos
   display: grid
+  flex: 1
   place-items: center
   margin-inline: 1.5rem
   padding-block: 5rem
@@ -88,18 +91,21 @@
 
 .buy-card-carrito
   display: none
-  position: absolute
+  position: fixed 
+  top: 1
   right: 0
-  width: 400px
-  height: 400px
+  width: 400px 
+  height: 600px
   background-color: #fff
-  border: 1px solid #e1e1e1
-  padding: 10px
-  z-index: 10
+  border-left: 1px solid #e1e1e1
+  padding: 20px
+  z-index: 1000
   overflow-y: auto
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1)
 
 .icono-carrito:hover .buy-card-carrito
   display: block
+
 
 .bolso
   display: flex
@@ -279,3 +285,5 @@
     color: rgb(255 193 7)
   &--blue
     color: rgb(13, 110, 253)
+
+  

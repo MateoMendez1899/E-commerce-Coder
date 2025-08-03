@@ -172,15 +172,19 @@ form .contraseña {
   color: #6c757d;
   font-size: 16px;
 }
-.form-iniciarsesion-group input {
+.form-iniciarsesion-group input,
+.form-iniciarsesion-group textarea {
   width: 100%;
-  padding: 8px 16px;
+  padding: 8px;
   border: 1px solid #cccccc;
   border-radius: 8px;
   font-size: 16px;
   outline: none;
+  resize: vertical;
+  box-sizing: border-box;
 }
-.form-iniciarsesion-group input:focus {
+.form-iniciarsesion-group input:focus,
+.form-iniciarsesion-group textarea:focus {
   border-color: #28a745;
   box-shadow: 0 0 0 3px rgba(248, 95, 106, 0.2);
 }
@@ -241,6 +245,11 @@ form .contraseña {
   .navbar-iniciarsesion-logo {
     height: 50px;
     width: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-iniciarsesion-wrapper {
+    padding: 3rem 10vw;
   }
 }
 .nosotros-frase-destacada {
@@ -1198,7 +1207,9 @@ form .contraseña {
 
 .container-main {
   display: flex;
+  flex: 1;
   flex-direction: column;
+  padding-bottom: 60px;
   padding: 16px;
   gap: 8px;
 }
@@ -1250,6 +1261,7 @@ form .contraseña {
 
 .container_productos {
   display: grid;
+  flex: 1;
   place-items: center;
   margin-inline: 1.5rem;
   padding-block: 5rem;
@@ -1274,15 +1286,17 @@ form .contraseña {
 
 .buy-card-carrito {
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 1;
   right: 0;
   width: 400px;
-  height: 400px;
+  height: 600px;
   background-color: #fff;
-  border: 1px solid #e1e1e1;
-  padding: 10px;
-  z-index: 10;
+  border-left: 1px solid #e1e1e1;
+  padding: 20px;
+  z-index: 1000;
   overflow-y: auto;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .icono-carrito:hover .buy-card-carrito {
